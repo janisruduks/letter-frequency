@@ -2,6 +2,6 @@ package io.codelex;
 
 import java.io.IOException;
 
-public interface FileContent {
+public interface FileContentInterface {
     String getCleanedFileContent() throws IOException, FileDoesntExistException;
 }

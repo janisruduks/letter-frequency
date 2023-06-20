@@ -2,12 +2,12 @@ package io.codelex;
 
 import java.io.File;
 
-public class FileGetter implements FileRetriever {
+public class FileRetriever implements FileRetrieverInterface {
 
     private static final String FILE_DIRECTORY = "src/main/java/io/codelex/filesToRead/";
     private final FileInfo fileInfo;
 
-    public FileGetter(String fileName) {
+    public FileRetriever(String fileName) {
         this.fileInfo = new FileInfo(fileName);
     }
 
@@ -17,6 +17,6 @@ public class FileGetter implements FileRetriever {
         if (file.exists()) {
             return file;
         }
-        throw new FileDoesntExistException();
+        throw new FileDoesntExistException("File does not exist.");
     }
 }

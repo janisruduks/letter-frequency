@@ -3,7 +3,7 @@ package io.codelex;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class LetterFrequencyTest {
+public class Main {
 
     public static void main(String[] args) {
         run();
@@ -17,7 +17,7 @@ public class LetterFrequencyTest {
         FileContentInterface fileContentInterface = new ProcessedFileContent(fileRetrieverInterface);
         LetterFrequency letterFrequency = new LetterFrequency(fileContentInterface);
         try {
-            System.out.println(letterFrequency.getLetterFrequency());
+            letterFrequency.getLetterFrequency().forEach((k, v) -> System.out.printf("%s: %d\n", k, v));
         } catch (IOException | FileDoesntExistException e) {
             e.printStackTrace();
         }

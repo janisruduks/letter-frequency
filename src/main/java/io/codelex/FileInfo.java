@@ -1,3 +1,3 @@
 package io.codelex;
 
-public record FileGetterData(String getFileName) {}
+public record FileInfo(String getFileName) {}

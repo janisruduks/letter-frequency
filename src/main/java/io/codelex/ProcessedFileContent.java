@@ -3,11 +3,11 @@ package io.codelex;
 import java.io.IOException;
 import java.nio.file.Files;
 
-public class ProcessedFileContentInterface implements FileContentInterface {
+public class ProcessedFileContent implements FileContentInterface {
 
     private final FileRetrieverInterface fileRetrieverInterface;
 
-    public ProcessedFileContentInterface(FileRetrieverInterface fileRetrieverInterface) {
+    public ProcessedFileContent(FileRetrieverInterface fileRetrieverInterface) {
         this.fileRetrieverInterface = fileRetrieverInterface;
     }
 
